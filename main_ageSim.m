@@ -8,21 +8,22 @@ close all
 
 nPop = 10^5; % population size
 pMut = 5*10^-3; % innovation rate (per transmission event)
-pDeath = 0.03; % per capita death rate
+pDeath = 0.02; % per capita death rate
 b = 0; % strength of frequency-dependent transmssion, b<0 negative bias, b>0 positive bias
 
-copyAll = 0; % if copyAll = 1 then copying happens from all age groups
-copyThresholdHigh = 6; % upper bound of the age of the copying pool (ATTENTION: coincides with c_thresh+1 in the manuscript)
+copyAll = 0; % 0: age-constrained copy pool as determined by copyThresholdHigh and copyThresholdLow
+             % 1: copying from the whole population 
+copyThresholdHigh = 2; % upper bound of the age of the copying pool (ATTENTION: coincides with c_thresh+1 in the manuscript)
 copyThresholdLow = 0; % lower bound of the age of the copying pool
 
-tMax = 18; % time steps to be run after equilibrium has been reached
-itMax = 10; % number of simulations
+tMax = 10000; % time steps to be run after equilibrium has been reached
+itMax = 100; % number of simulations
 
-localMode = 1; % 0: age-structured neutral model as explained in section 2.1., 
+localMode = 0; % 0: age-structured neutral model as explained in section 2.1., 
                % 1: age-structured neutral model with local interactions as explained in section 2.2
 binSize = 100; % size of local groups when localMode =1, MUST be divisor of nPop
 
-PDmode = 0; % 0: do nothing, 1: calculate progeny distribution
+PDmode = 1; % 0: do nothing, 1: calculate progeny distribution
 freqMode = 0; % 0: do nothing, 1: records the frequencies of all cultural variant types in the interval [1,tMax] and their life times 
               % (ATTENTION: this option slows the simulation down greatly)
 
