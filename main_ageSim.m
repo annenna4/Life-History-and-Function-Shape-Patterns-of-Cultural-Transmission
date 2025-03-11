@@ -1,6 +1,6 @@
 % Simulation of both versions of the age-structured neutral model described
-% in the manuscript `Life History and Functionality in Cultural
-% Transmission: Insight from Mismatches between Neutral Theory and Data' by
+% in the manuscript `Life History and Function Shape Patterns of Cultural
+% Transmission' by
 % Anne Kandler, Rafael D'Andrea, James O'Dwyer
 
 clear all
