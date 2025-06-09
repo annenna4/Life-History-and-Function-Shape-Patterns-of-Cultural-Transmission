@@ -28,7 +28,7 @@ else % frequency-dependent transmission of strength b
     if numel(types)>1
         h = hist(pop(1,copyIndex),types); % frequencies of all variant types currently present
         h = (h./numel(copyIndex)).^(1+b);
-        hAdd = randsrc(nBirth-nMut,1,[types;h./sum(h)])
+        hAdd = randsrc(nBirth-nMut,1,[types;h./sum(h)]);
     else 
         hAdd = types*ones(1,nBirth-nMut);
     end
